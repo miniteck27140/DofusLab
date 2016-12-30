@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusLab.Bot", "DofusLab.Bot\DofusLab.Bot.csproj", "{7581B1AC-2BCE-4750-A38F-2B00FAA3A717}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusLab.Communication", "DofusLab.Communication\DofusLab.Communication.csproj", "{68C49C61-29A7-402A-B1FB-E3BAE74CAB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusLab.Hooks", "DofusLab.Hooks\DofusLab.Hooks.csproj", "{7F95BCEA-E6B3-4DA9-9D89-50BE40F38661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusLab.Protocol", "DofusLab.Protocol\DofusLab.Protocol.csproj", "{D1270211-883D-4104-ACEA-8C911CECBE14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusLab.Core", "DofusLab.Core\DofusLab.Core.csproj", "{37DB76A4-4739-46B9-B868-D7991428A3AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{7581B1AC-2BCE-4750-A38F-2B00FAA3A717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7581B1AC-2BCE-4750-A38F-2B00FAA3A717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7581B1AC-2BCE-4750-A38F-2B00FAA3A717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C49C61-29A7-402A-B1FB-E3BAE74CAB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C49C61-29A7-402A-B1FB-E3BAE74CAB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C49C61-29A7-402A-B1FB-E3BAE74CAB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C49C61-29A7-402A-B1FB-E3BAE74CAB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F95BCEA-E6B3-4DA9-9D89-50BE40F38661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F95BCEA-E6B3-4DA9-9D89-50BE40F38661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F95BCEA-E6B3-4DA9-9D89-50BE40F38661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F95BCEA-E6B3-4DA9-9D89-50BE40F38661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1270211-883D-4104-ACEA-8C911CECBE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1270211-883D-4104-ACEA-8C911CECBE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1270211-883D-4104-ACEA-8C911CECBE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1270211-883D-4104-ACEA-8C911CECBE14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DB76A4-4739-46B9-B868-D7991428A3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DB76A4-4739-46B9-B868-D7991428A3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DB76A4-4739-46B9-B868-D7991428A3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DB76A4-4739-46B9-B868-D7991428A3AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

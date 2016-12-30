@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7581B1AC-2BCE-4750-A38F-2B00FAA3A717}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{7F95BCEA-E6B3-4DA9-9D89-50BE40F38661}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DofusLab.Bot</RootNamespace>
-    <AssemblyName>DofusLab.Bot</AssemblyName>
+    <RootNamespace>DofusLab.Hooks</RootNamespace>
+    <AssemblyName>DofusLab.Hooks</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -38,10 +35,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
@@ -52,17 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Injector\RemoteInterface.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="NativeSocketMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proxy\Auth\AuthClient.cs" />
-    <Compile Include="Proxy\Auth\AuthServer.cs" />
-    <Compile Include="Proxy\Realm\RealmClient.cs" />
-    <Compile Include="Proxy\Realm\RealmServer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="EasyHook32.dll">
@@ -85,13 +70,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DofusLab.Communication\DofusLab.Communication.csproj">
-      <Project>{68c49c61-29a7-402a-b1fb-e3bae74cab50}</Project>
-      <Name>DofusLab.Communication</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DofusLab.Protocol\DofusLab.Protocol.csproj">
-      <Project>{d1270211-883d-4104-acea-8c911cecbe14}</Project>
-      <Name>DofusLab.Protocol</Name>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DofusLab.Bot\DofusLab.Bot.csproj">
+      <Project>{7581b1ac-2bce-4750-a38f-2b00faa3a717}</Project>
+      <Name>DofusLab.Bot</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
