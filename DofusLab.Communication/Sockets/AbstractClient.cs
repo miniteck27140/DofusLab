@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using DofusLab.Communication.Interfaces;
 using DofusLab.Communication.Sockets.Extensions;
+using DofusLab.Core.IO.Readers;
 using static System.Console;
 
 namespace DofusLab.Communication.Sockets
@@ -56,6 +57,7 @@ namespace DofusLab.Communication.Sockets
                 {
                     try
                     {
+                        var mBuilder = new MetadataBuilder();
                         for (;;)
                         {
                             using (var mb = Server.BufferPool.GetManagedBuffer(4096))
@@ -68,7 +70,13 @@ namespace DofusLab.Communication.Sockets
 
                                 mb.Resize(readBytes);
 
+                                bool isValid = mBuilder.Build(new DofusBinaryReader(mb.Buffer));
+
+                                if(isValid)
+                                    WriteClient($"Received message with ID : {mBuilder.MessageId}");
+
                                 OnReceiveClient(mb.Buffer);
+                                mBuilder = new MetadataBuilder();
                             }
                         }
                     }
@@ -85,6 +93,7 @@ namespace DofusLab.Communication.Sockets
                 {
                     try
                     {
+                        var mBuilder = new MetadataBuilder();
                         for (;;)
                         {
                             using (var mb = Server.BufferPool.GetManagedBuffer(4096))
@@ -97,7 +106,13 @@ namespace DofusLab.Communication.Sockets
 
                                 mb.Resize(readBytes);
 
+                                bool isValid = mBuilder.Build(new DofusBinaryReader(mb.Buffer));
+
+                                if (isValid)
+                                    WriteClient($"Received message with ID : {mBuilder.MessageId}");
+
                                 OnReceiveServer(mb.Buffer);
+                                mBuilder = new MetadataBuilder();
                             }
                         }
                     }

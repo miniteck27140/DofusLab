@@ -49,12 +49,17 @@
     <Compile Include="Interfaces\IBufferPool.cs" />
     <Compile Include="ManagedBuffer.cs" />
     <Compile Include="Managers\MessageHandlerManager.cs" />
+    <Compile Include="MetadataBuilder.cs" />
     <Compile Include="Sockets\AbstractClient.cs" />
     <Compile Include="Sockets\AbstractServer.cs" />
     <Compile Include="Sockets\Extensions\SocketExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DofusLab.Core\DofusLab.Core.csproj">
+      <Project>{37db76a4-4739-46b9-b868-d7991428a3ae}</Project>
+      <Name>DofusLab.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DofusLab.Protocol\DofusLab.Protocol.csproj">
       <Project>{d1270211-883d-4104-acea-8c911cecbe14}</Project>
       <Name>DofusLab.Protocol</Name>

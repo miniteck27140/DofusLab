@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,8 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cryptography\Cryptography.cs" />
+    <Compile Include="IO\CustomConst.cs" />
+    <Compile Include="IO\IReader.cs" />
+    <Compile Include="IO\IWriter.cs" />
+    <Compile Include="IO\Readers\BigEndian.cs" />
+    <Compile Include="IO\Readers\DofusBinaryReader.cs" />
+    <Compile Include="IO\Types\Binary64.cs" />
+    <Compile Include="IO\Types\CustomInt64.cs" />
+    <Compile Include="IO\Types\CustomUInt64.cs" />
+    <Compile Include="IO\Writers\BigEndian.cs" />
+    <Compile Include="IO\Writers\DofusBinaryWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
